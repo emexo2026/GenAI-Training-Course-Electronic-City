@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Best GenAI Training in Electronic City by eMexo Technologies. GenAI Course, Certification, Placement support in Electronic City Bangalore."/>
+  <meta name="keywords" content="GenAI Training in Electronic City, GenAI Course in Electronic City, GenAI Certification Course in Electronic City, Best GenAI Training in Electronic City, GenAI Training Institute in Electronic City, GenAI Training Center in Electronic City, GenAI Training and Placement in Electronic City"/>
+  <title>Best GenAI Training in Electronic City | eMexo Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg:#050d1a;
+      --surface:#0c1829;
+      --surface2:#101f35;
+      --border:#1e3050;
+      --green:#00ff88;
+      --green2:#00cc6a;
+      --amber:#ffb800;
+      --rose:#ff4d6d;
+      --sky:#38bdf8;
+      --white:#ffffff;
+      --text:#c8d8f0;
+      --muted:#6b87a8;
+      --grad-green:linear-gradient(135deg,#00ff88,#00cc6a);
+      --grad-card:linear-gradient(145deg,#0c1829,#0f2040);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Outfit',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.75;
+      overflow-x:hidden;
+      cursor:none;
+    }
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+
+    /* ── CUSTOM CURSOR ── */
+    .cursor{
+      width:12px;height:12px;
+      background:var(--green);
+      border-radius:50%;
+      position:fixed;top:0;left:0;
+      pointer-events:none;z-index:9999;
+      transition:transform .1s;
+      box-shadow:0 0 12px var(--green),0 0 30px rgba(0,255,136,.4);
+    }
+    .cursor-ring{
+      width:36px;height:36px;
+      border:1.5px solid rgba(0,255,136,.5);
+      border-radius:50%;
+      position:fixed;top:0;left:0;
+      pointer-events:none;z-index:9998;
+      transition:transform .15s,width .2s,height .2s;
+    }
+
+    /* ── PARTICLES CANVAS ── */
+    #particles{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;}
+
+    /* ── NAV ── */
+    nav{
+      position:sticky;top:0;z-index:100;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 32px;
+      background:rgba(5,13,26,.85);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+    }
+    .logo img{height:44px;width:auto;filter:brightness(1.1);}
+    .nav-right{display:flex;align-items:center;gap:16px;}
+    .nav-phone{color:var(--green);font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.04em;}
+    .nav-cta{
+      background:var(--green);color:#050d1a;
+      font-weight:700;font-size:.85rem;
+      padding:10px 22px;border-radius:6px;
+      transition:transform .2s,box-shadow .2s;
+      letter-spacing:.03em;
+    }
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(0,255,136,.5);}
+
+    /* ── HERO ── */
+    .hero{
+      position:relative;z-index:1;
+      padding:100px 24px 120px;
+      text-align:center;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 700px 500px at 50% 0%,rgba(0,255,136,.07) 0%,transparent 70%),
+        radial-gradient(ellipse 400px 300px at 80% 80%,rgba(56,189,248,.05) 0%,transparent 60%);
+      pointer-events:none;
+    }
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid rgba(0,255,136,.3);
+      background:rgba(0,255,136,.06);
+      color:var(--green);
+      font-family:'Space Mono',monospace;
+      font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+      padding:8px 20px;border-radius:999px;
+      margin-bottom:32px;
+      animation:fadeDown .8s ease both;
+    }
+    .badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 1.5s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+
+    .hero h1{
+      font-size:clamp(2.2rem,5.5vw,4rem);
+      font-weight:900;
+      line-height:1.1;
+      max-width:880px;margin:0 auto 24px;
+      animation:fadeUp .9s ease .2s both;
+    }
+    .hero h1 .hl{
+      background:var(--grad-green);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero h1 .hl2{color:var(--amber);}
+    .hero-sub{
+      font-size:1.1rem;color:var(--muted);
+      max-width:580px;margin:0 auto 44px;
+      animation:fadeUp .9s ease .35s both;
+    }
+    .hero-btns{
+      display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+      animation:fadeUp .9s ease .5s both;
+    }
+    .btn-g{
+      background:var(--grad-green);color:#050d1a;
+      font-weight:800;font-size:1rem;
+      padding:15px 36px;border-radius:8px;
+      position:relative;overflow:hidden;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .btn-g::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+      transform:translateX(-100%);
+      transition:transform .5s;
+    }
+    .btn-g:hover::after{transform:translateX(100%);}
+    .btn-g:hover{transform:translateY(-3px);box-shadow:0 0 30px rgba(0,255,136,.5);}
+    .btn-ghost{
+      border:1.5px solid rgba(0,255,136,.35);color:var(--green);
+      font-weight:600;font-size:1rem;
+      padding:13px 32px;border-radius:8px;
+      transition:background .2s,box-shadow .2s;
+    }
+    .btn-ghost:hover{background:rgba(0,255,136,.08);box-shadow:0 0 20px rgba(0,255,136,.2);}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+
+    /* ── HERO IMAGE ── */
+    .hero-img-wrap{
+      max-width:900px;margin:60px auto 0;
+      border-radius:20px;overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow:0 0 60px rgba(0,255,136,.12),0 40px 80px rgba(0,0,0,.6);
+      animation:fadeUp 1s ease .65s both;
+      position:relative;z-index:1;
+    }
+    .hero-img-wrap img{width:100%;}
+    .img-cap{
+      background:var(--surface);
+      border-top:1px solid var(--border);
+      padding:12px 20px;
+      font-size:.82rem;color:var(--muted);
+      text-align:center;
+      font-family:'Space Mono',monospace;
+    }
+
+    /* ── INFINITE MARQUEE ── */
+    .marquee-section{
+      padding:28px 0;
+      background:var(--surface);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      overflow:hidden;position:relative;z-index:1;
+    }
+    .marquee-track{
+      display:flex;gap:0;
+      animation:marquee 22s linear infinite;
+      width:max-content;
+    }
+    .marquee-track:hover{animation-play-state:paused;}
+    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+    .marquee-item{
+      display:flex;align-items:center;gap:10px;
+      padding:0 32px;
+      font-family:'Space Mono',monospace;
+      font-size:.78rem;letter-spacing:.08em;
+      color:var(--muted);
+      white-space:nowrap;
+      text-transform:uppercase;
+    }
+    .marquee-item .dot{color:var(--green);font-size:1.2rem;animation:pulse 2s infinite;}
+    .marquee-item strong{color:var(--green);font-weight:700;}
+
+    /* ── STATS ── */
+    .stats-section{
+      padding:80px 24px;
+      position:relative;z-index:1;
+    }
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:20px;max-width:900px;margin:0 auto;
+    }
+    .stat-card{
+      background:var(--grad-card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:32px 24px;
+      text-align:center;
+      position:relative;overflow:hidden;
+      transition:transform .3s,border-color .3s,box-shadow .3s;
+      cursor:default;
+    }
+    .stat-card::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at top,rgba(0,255,136,.08) 0%,transparent 70%);
+      opacity:0;transition:opacity .3s;
+    }
+    .stat-card:hover{transform:translateY(-6px);border-color:rgba(0,255,136,.4);box-shadow:0 0 30px rgba(0,255,136,.15);}
+    .stat-card:hover::before{opacity:1;}
+    .stat-n{
+      font-family:'Space Mono',monospace;
+      font-size:2.4rem;font-weight:700;
+      background:var(--grad-green);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+      display:block;margin-bottom:6px;
+    }
+    .stat-l{font-size:.85rem;color:var(--muted);font-weight:500;}
+
+    /* ── SECTION COMMON ── */
+    .section{padding:80px 24px;position:relative;z-index:1;}
+    .section-alt{background:var(--surface);}
+    .section-label{
+      font-family:'Space Mono',monospace;
+      font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+      color:var(--green);margin-bottom:12px;display:block;
+    }
+    h2{
+      font-size:clamp(1.6rem,3vw,2.2rem);
+      font-weight:800;color:var(--white);
+      margin-bottom:18px;line-height:1.2;
+    }
+    h2 span{
+      background:var(--grad-green);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .section-p{color:var(--muted);font-size:1rem;margin-bottom:16px;max-width:760px;}
+    .klink{
+      color:var(--green);font-weight:600;
+      border-bottom:1px dotted rgba(0,255,136,.4);
+      transition:border-color .2s;
+    }
+    .klink:hover{border-color:var(--green);}
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal{
+      opacity:0;transform:translateY(40px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-left{
+      opacity:0;transform:translateX(-40px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .reveal-right{
+      opacity:0;transform:translateX(40px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+    .reveal-right.visible{opacity:1;transform:translateX(0);}
+
+    /* ── CARDS ── */
+    .wrap{max-width:900px;margin:0 auto;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:36px;}
+    .card{
+      background:var(--grad-card);
+      border:1px solid var(--border);
+      border-radius:16px;padding:28px;
+      position:relative;overflow:hidden;
+      transition:transform .3s,border-color .3s,box-shadow .3s;
+      cursor:default;
+    }
+    .card::after{
+      content:'';position:absolute;
+      bottom:0;left:0;right:0;height:2px;
+      background:var(--grad-green);
+      transform:scaleX(0);transform-origin:left;
+      transition:transform .4s ease;
+    }
+    .card:hover{transform:translateY(-6px);border-color:rgba(0,255,136,.3);box-shadow:0 0 30px rgba(0,255,136,.1);}
+    .card:hover::after{transform:scaleX(1);}
+    .card-icon{font-size:2rem;margin-bottom:14px;}
+    .card h3{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+    .card p{font-size:.88rem;color:var(--muted);margin:0;}
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight{
+      background:linear-gradient(135deg,rgba(0,255,136,.06),rgba(56,189,248,.04));
+      border:1px solid rgba(0,255,136,.2);
+      border-radius:14px;padding:24px 28px;
+      margin-top:32px;
+    }
+    .highlight p{color:var(--text);margin:0;font-size:.98rem;}
+
+    /* ── IMAGE BLOCKS ── */
+    .img-block{
+      border-radius:18px;overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow:0 0 40px rgba(0,255,136,.07),0 20px 50px rgba(0,0,0,.5);
+      margin-top:44px;
+      transition:box-shadow .4s,transform .4s;
+    }
+    .img-block:hover{
+      box-shadow:0 0 60px rgba(0,255,136,.18),0 30px 60px rgba(0,0,0,.5);
+      transform:scale(1.01);
+    }
+    .img-block img{width:100%;}
+
+    /* ── INTERNAL LINKS GRID ── */
+    .ilinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px;}
+    .icard{
+      background:var(--surface2);
+      border:1px solid var(--border);
+      border-radius:14px;padding:22px;
+      display:block;
+      position:relative;overflow:hidden;
+      transition:transform .3s,border-color .3s,box-shadow .3s;
+    }
+    .icard::before{
+      content:'';position:absolute;
+      top:0;left:-100%;width:100%;height:100%;
+      background:linear-gradient(90deg,transparent,rgba(0,255,136,.05),transparent);
+      transition:left .5s ease;
+    }
+    .icard:hover::before{left:100%;}
+    .icard:hover{transform:translateY(-4px);border-color:rgba(0,255,136,.35);box-shadow:0 0 24px rgba(0,255,136,.12);}
+    .icard .kl{
+      font-weight:700;color:var(--green);
+      font-size:.92rem;display:block;margin-bottom:6px;
+      font-family:'Space Mono',monospace;
+    }
+    .icard .ks{font-size:.8rem;color:var(--muted);}
+    .icard .arrow-ic{
+      position:absolute;right:20px;top:50%;transform:translateY(-50%);
+      color:rgba(0,255,136,.3);font-size:1.2rem;
+      transition:right .3s,color .3s;
+    }
+    .icard:hover .arrow-ic{right:14px;color:var(--green);}
+
+    /* ── KEYWORD TAGS ── */
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+    .tag{
+      background:rgba(0,255,136,.06);
+      border:1px solid rgba(0,255,136,.2);
+      color:var(--green);
+      font-family:'Space Mono',monospace;
+      font-size:.72rem;font-weight:700;
+      padding:7px 16px;border-radius:999px;
+      letter-spacing:.06em;
+      transition:background .2s,box-shadow .2s,transform .2s;
+      cursor:default;
+    }
+    .tag:hover{background:rgba(0,255,136,.14);box-shadow:0 0 14px rgba(0,255,136,.2);transform:translateY(-2px);}
+
+    /* ── FAQ ── */
+    .faq-list{display:flex;flex-direction:column;gap:12px;margin-top:36px;}
+    .faq-item{
+      background:var(--surface2);
+      border:1px solid var(--border);
+      border-radius:14px;overflow:hidden;
+      transition:border-color .3s;
+    }
+    .faq-item:hover{border-color:rgba(0,255,136,.25);}
+    .faq-q{
+      width:100%;background:none;border:none;
+      text-align:left;cursor:pointer;
+      display:flex;justify-content:space-between;align-items:center;
+      gap:14px;padding:20px 24px;
+      font-family:'Outfit',sans-serif;
+      font-weight:700;font-size:.97rem;color:var(--white);
+    }
+    .faq-arrow{
+      width:28px;height:28px;border-radius:50%;
+      background:rgba(0,255,136,.1);border:1px solid rgba(0,255,136,.25);
+      color:var(--green);display:flex;align-items:center;justify-content:center;
+      font-size:.9rem;flex-shrink:0;
+      transition:transform .35s,background .3s;
+    }
+    .faq-q.open .faq-arrow{transform:rotate(180deg);background:rgba(0,255,136,.2);}
+    .faq-a{
+      max-height:0;overflow:hidden;
+      transition:max-height .4s ease,padding .3s;
+      padding:0 24px;font-size:.93rem;color:var(--muted);
+    }
+    .faq-a.open{max-height:280px;padding:0 24px 20px;}
+
+    /* ── CONTACT ── */
+    .contact-box{
+      background:var(--surface2);
+      border:1px solid var(--border);
+      border-radius:24px;padding:56px 40px;
+      text-align:center;position:relative;overflow:hidden;
+    }
+    .contact-box::before{
+      content:'';position:absolute;
+      width:600px;height:600px;
+      background:radial-gradient(circle,rgba(0,255,136,.06) 0%,transparent 70%);
+      top:-200px;left:50%;transform:translateX(-50%);
+      border-radius:50%;pointer-events:none;
+    }
+    .contact-box h2{position:relative;}
+    .contact-box .section-p{margin:0 auto 32px;position:relative;}
+    .cdetails{
+      display:flex;gap:24px;justify-content:center;
+      flex-wrap:wrap;margin-bottom:36px;
+      position:relative;
+    }
+    .citem{
+      display:flex;align-items:center;gap:10px;
+      background:rgba(0,255,136,.05);
+      border:1px solid rgba(0,255,136,.15);
+      border-radius:10px;padding:12px 20px;
+      font-size:.9rem;transition:border-color .3s,background .3s;
+    }
+    .citem:hover{border-color:rgba(0,255,136,.4);background:rgba(0,255,136,.1);}
+    .citem a{color:var(--green);font-weight:600;}
+    .citem span.icon{font-size:1.1rem;}
+
+    /* ── ENROLL CTA ── */
+    .enroll-section{
+      padding:96px 24px;
+      text-align:center;
+      position:relative;z-index:1;
+    }
+    .enroll-section::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse 800px 400px at 50% 50%,rgba(0,255,136,.05) 0%,transparent 70%);
+      pointer-events:none;
+    }
+
+    /* ── SECOND MARQUEE (reverse) ── */
+    .marquee-rev .marquee-track{animation:marquee-r 28s linear infinite;}
+    @keyframes marquee-r{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+    .marquee-rev .marquee-item{color:rgba(255,184,0,.5);}
+    .marquee-rev .marquee-item strong{color:var(--amber);}
+    .marquee-rev .marquee-item .dot{color:var(--amber);}
+
+    /* ── FLOATING ANIMATION ── */
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+    .float{animation:float 4s ease-in-out infinite;}
+    .float-delay{animation:float 4s ease-in-out 1.5s infinite;}
+
+    /* ── GLOW RING ── */
+    @keyframes glow-ring{0%,100%{box-shadow:0 0 0 0 rgba(0,255,136,.4);}50%{box-shadow:0 0 0 12px rgba(0,255,136,0);}}
+
+    /* ── FOOTER ── */
+    footer{
+      background:var(--surface);
+      border-top:1px solid var(--border);
+      padding:28px 24px;
+      text-align:center;
+      font-size:.8rem;color:var(--muted);
+      font-family:'Space Mono',monospace;
+      position:relative;z-index:1;
+    }
+    footer a{color:var(--green);}
+    footer a:hover{text-decoration:underline;}
+
+    /* ── SCROLL PROGRESS ── */
+    #progress{
+      position:fixed;top:0;left:0;height:3px;
+      background:var(--grad-green);
+      z-index:9999;width:0%;
+      transition:width .1s;
+      box-shadow:0 0 10px rgba(0,255,136,.6);
+    }
+
+    /* ── BACK TO TOP ── */
+    #btt{
+      position:fixed;bottom:32px;right:32px;
+      width:44px;height:44px;border-radius:50%;
+      background:var(--green);color:#050d1a;
+      font-size:1.2rem;font-weight:700;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;z-index:200;
+      box-shadow:0 0 20px rgba(0,255,136,.4);
+      animation:glow-ring 2s ease-in-out infinite;
+      opacity:0;transform:translateY(20px);
+      transition:opacity .3s,transform .3s;
+    }
+    #btt.show{opacity:1;transform:translateY(0);}
+    #btt:hover{background:var(--green2);}
+
+    @media(max-width:600px){
+      .contact-box{padding:36px 20px;}
+      nav{padding:14px 18px;}
+      .nav-phone{display:none;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div id="progress"></div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Back to top -->
+<div id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<!-- Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="https://www.emexotechnologies.com/">
+    <img src="https://www.emexotechnologies.com/wp-content/uploads/2020/02/emexo-logo.png" alt="eMexo Technologies" height="44"/>
+  </a>
+  <div class="nav-right">
+    <a href="tel:+919513216462" class="nav-phone">📞 +91-9513216462</a>
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="nav-cta">Enroll Now →</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    Electronic City's #1 GenAI Institute
+  </div>
+  <h1>
+    Master <span class="hl">Generative AI</span><br/>
+    Training in <span class="hl2">Electronic City</span>
+  </h1>
+  <p class="hero-sub">
+    LLMs · Prompt Engineering · LangChain · Stable Diffusion · RAG Pipelines<br/>
+    Industry certification + 100% placement support at eMexo Technologies.
+  </p>
+  <div class="hero-btns">
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="btn-g">🚀 Enroll Now</a>
+    <a href="tel:+919513216462" class="btn-ghost">📞 Free Demo Class</a>
+  </div>
+
+  <!-- Hero Image 1 -->
+  <div class="hero-img-wrap">
+    <img
+      src="https://raw.githubusercontent.com/emexo2026/GenAI-Training-Course-Electronic-City/refs/heads/main/best-generative-ai-training-institute-electronic-city-bangalore1.png"
+      alt="Best GenAI Training Institute in Electronic City Bangalore"
+      loading="lazy"
+    />
+    <p class="img-cap">🏆 Best GenAI Training Institute in Electronic City — eMexo Technologies, Bangalore</p>
+  </div>
+</header>
+
+<!-- ══ MARQUEE 1 ══ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <!-- repeated twice for seamless loop -->
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Course in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>Best GenAI Training in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Certification Course in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training Institute in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training Center in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training and Placement in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>eMexo Technologies Bangalore</strong></span>
+    <!-- duplicate -->
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Course in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>Best GenAI Training in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Certification Course in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training Institute in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training Center in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>GenAI Training and Placement in Electronic City</strong></span>
+    <span class="marquee-item"><span class="dot">●</span> <strong>eMexo Technologies Bangalore</strong></span>
+  </div>
+</div>
+
+<!-- ══ STATS ══ -->
+<div class="stats-section">
+  <div class="stats-grid wrap">
+    <div class="stat-card reveal">
+      <span class="stat-n" data-target="5000">0</span>
+      <span class="stat-l">Students Trained</span>
+    </div>
+    <div class="stat-card reveal" style="transition-delay:.1s">
+      <span class="stat-n" data-target="98" data-suffix="%">0</span>
+      <span class="stat-l">Placement Rate</span>
+    </div>
+    <div class="stat-card reveal" style="transition-delay:.2s">
+      <span class="stat-n" data-target="12" data-suffix="+">0</span>
+      <span class="stat-l">Years Experience</span>
+    </div>
+    <div class="stat-card reveal" style="transition-delay:.3s">
+      <span class="stat-n" data-target="150" data-suffix="+">0</span>
+      <span class="stat-l">Hiring Partners</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ INTRO ARTICLE ══ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <span class="section-label reveal">About the Course</span>
+    <h2 class="reveal"><span>GenAI Training</span> in Electronic City — Your AI Career Starts Here</h2>
+    <p class="section-p reveal">
+      The demand for Generative AI professionals is growing at an unprecedented rate across every industry globally. If you are searching for a top-tier
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">GenAI Training in Electronic City</a>,
+      look no further than eMexo Technologies — the most trusted
+      <strong style="color:var(--white)">GenAI Training Institute in Electronic City</strong> with a 12-year track record of launching careers in AI.
+    </p>
+    <p class="section-p reveal">
+      Whether you are a fresh graduate, a software developer pivoting into AI, or a professional making a bold career switch, our
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">GenAI Certification Course in Electronic City</a>
+      is engineered to take you from zero to job-ready. Our
+      <strong style="color:var(--white)">GenAI Training Center in Electronic City</strong> sits in the heart of Bangalore's tech corridor — surrounded by the very companies that will hire you.
+    </p>
+    <p class="section-p reveal">
+      Generative AI is no longer a buzzword. It is the foundation reshaping software development, healthcare, finance, and every other sector. Our comprehensive
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">GenAI Course in Electronic City</a>
+      covers everything from foundational AI concepts to advanced fine-tuning and production deployment — ensuring you walk out with real-world confidence, live projects in your portfolio, and the certification employers actively seek.
+    </p>
+
+    <!-- Image 2 -->
+    <div class="img-block reveal">
+      <img
+        src="https://raw.githubusercontent.com/emexo2026/GenAI-Training-Course-Electronic-City/refs/heads/main/best-generative-ai-training-institute-electronic-city-bangalore.png"
+        alt="GenAI Course in Electronic City - eMexo Technologies"
+        loading="lazy"
+      />
+      <p class="img-cap">GenAI Course in Electronic City — Hands-On Learning Environment at eMexo Technologies</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY CHOOSE ══ -->
+<section class="section">
+  <div class="wrap">
+    <span class="section-label reveal">Why eMexo</span>
+    <h2 class="reveal">Why Choose Our <span>GenAI Training Institute</span> in Electronic City?</h2>
+    <p class="section-p reveal">
+      Choosing the right
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">GenAI Training and Placement in Electronic City</a>
+      partner can define your entire career. Here is what sets eMexo apart:
+    </p>
+    <div class="card-grid">
+      <div class="card reveal" style="transition-delay:.05s">
+        <div class="card-icon">🎓</div>
+        <h3>Expert Industry Trainers</h3>
+        <p>Learn from AI veterans with 10+ years of real-world experience — practitioners, not just academics.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.1s">
+        <div class="card-icon">🛠️</div>
+        <h3>Hands-On Live Projects</h3>
+        <p>Build 5+ capstone projects with real datasets, OpenAI APIs, LangChain, and Stable Diffusion.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.15s">
+        <div class="card-icon">📜</div>
+        <h3>Industry Certification</h3>
+        <p>Our <strong style="color:var(--white)">GenAI Certification Course in Electronic City</strong> is recognised by 150+ top companies.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.2s">
+        <div class="card-icon">💼</div>
+        <h3>100% Placement Support</h3>
+        <p>Dedicated placement cell — mock interviews, resume prep, and direct referrals to MNCs and startups.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.25s">
+        <div class="card-icon">🔄</div>
+        <h3>Flexible Batch Options</h3>
+        <p>Weekday, weekend, and fast-track batches — designed to fit around your existing life.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.3s">
+        <div class="card-icon">📍</div>
+        <h3>Prime EC Location</h3>
+        <p>Our <strong style="color:var(--white)">GenAI Training Center</strong> is minutes from Phase 1 &amp; Phase 2 tech parks.</p>
+      </div>
+    </div>
+    <div class="highlight reveal">
+      <p>💡 <strong style="color:var(--white)">Market Insight:</strong> The global Generative AI market is projected to reach <strong style="color:var(--green)">$1.3 trillion by 2032</strong>, growing at 42% CAGR. Enrolling in the <strong style="color:var(--white)">Best GenAI Training in Electronic City</strong> today puts you ahead of 95% of the current workforce.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CURRICULUM ══ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <span class="section-label reveal">Curriculum</span>
+    <h2 class="reveal">What You'll Learn at Our <span>GenAI Training Center</span> in Electronic City</h2>
+    <p class="section-p reveal">
+      Our
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">Best GenAI Training in Electronic City</a>
+      follows an industry-aligned curriculum, updated every quarter. Here is a module-by-module breakdown:
+    </p>
+    <div class="card-grid">
+      <div class="card reveal"><div class="card-icon">🧠</div><h3>Module 1: AI &amp; ML Foundations</h3><p>Linear algebra, probability, Python for AI, supervised &amp; unsupervised learning.</p></div>
+      <div class="card reveal" style="transition-delay:.07s"><div class="card-icon">🔡</div><h3>Module 2: Large Language Models</h3><p>GPT architecture, BERT, tokenisation, embeddings, and transformer deep-dives.</p></div>
+      <div class="card reveal" style="transition-delay:.14s"><div class="card-icon">💬</div><h3>Module 3: Prompt Engineering</h3><p>Zero-shot, few-shot, chain-of-thought, and production-grade prompting strategies.</p></div>
+      <div class="card reveal" style="transition-delay:.21s"><div class="card-icon">🖼️</div><h3>Module 4: Image Generation</h3><p>Stable Diffusion, DALL·E, ControlNet, fine-tuning on custom datasets.</p></div>
+      <div class="card reveal" style="transition-delay:.28s"><div class="card-icon">🔗</div><h3>Module 5: LangChain &amp; RAG</h3><p>RAG pipelines, autonomous AI agents, memory-powered chatbots from scratch.</p></div>
+      <div class="card reveal" style="transition-delay:.35s"><div class="card-icon">🚀</div><h3>Module 6: Model Deployment</h3><p>FastAPI, Docker, AWS/GCP deployment, and real-time AI app monitoring.</p></div>
+    </div>
+
+    <!-- Image 3 -->
+    <div class="img-block reveal">
+      <img
+        src="https://raw.githubusercontent.com/emexo2026/GenAI-Training-Course-Electronic-City/refs/heads/main/genai-developer-course-real-time-projects-electronic-city.png"
+        alt="GenAI Developer Course with Real-Time Projects in Electronic City"
+        loading="lazy"
+      />
+      <p class="img-cap">GenAI Developer Course with Real-Time Projects — Electronic City, Bangalore</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO SHOULD JOIN ══ -->
+<section class="section">
+  <div class="wrap">
+    <span class="section-label reveal">Who Should Join</span>
+    <h2 class="reveal">Is This <span>GenAI Training</span> Right for You?</h2>
+    <p class="section-p reveal">
+      Our <strong style="color:var(--white)">GenAI Training Center in Electronic City</strong> welcomes learners from all backgrounds. You don't need a CS degree — you need curiosity and commitment. This programme is ideal for:
+    </p>
+    <div class="card-grid">
+      <div class="card reveal"><div class="card-icon">🎒</div><h3>Fresh Graduates</h3><p>Enter the AI job market with a strong portfolio, live projects, and a recognised certification.</p></div>
+      <div class="card reveal" style="transition-delay:.07s"><div class="card-icon">💻</div><h3>Software Developers</h3><p>Layer cutting-edge GenAI skills on top of your existing technical foundation and command a premium salary.</p></div>
+      <div class="card reveal" style="transition-delay:.14s"><div class="card-icon">📊</div><h3>Data Scientists</h3><p>Advance from classical ML to state-of-the-art Generative AI techniques and LLM fine-tuning.</p></div>
+      <div class="card reveal" style="transition-delay:.21s"><div class="card-icon">🌐</div><h3>Non-IT Professionals</h3><p>Marketers, managers, designers — harness AI tools strategically and lead in your domain.</p></div>
+      <div class="card reveal" style="transition-delay:.28s"><div class="card-icon">🔁</div><h3>Career Gap Candidates</h3><p>Re-enter the tech industry with high-demand, future-proof skills and 100% placement backing.</p></div>
+      <div class="card reveal" style="transition-delay:.35s"><div class="card-icon">🏢</div><h3>Working Professionals</h3><p>Weekend and fast-track batches allow you to upskill without pausing your career.</p></div>
+    </div>
+    <p class="section-p reveal" style="margin-top:28px;">
+      Our
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">GenAI Training and Placement in Electronic City</a>
+      programme has placed candidates at Infosys, Wipro, Accenture, IBM, and 150+ product companies and funded startups across Bangalore.
+    </p>
+  </div>
+</section>
+
+<!-- ══ MARQUEE 2 (reverse, amber) ══ -->
+<div class="marquee-section marquee-rev">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="dot">◆</span> <strong>100% Placement Support</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Live Projects</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Industry Certification</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Expert Trainers</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>LLMs · LangChain · RAG · Stable Diffusion</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Flexible Batches</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Electronic City Phase 1, Bangalore</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>eMexo Technologies</strong></span>
+    <!-- duplicate -->
+    <span class="marquee-item"><span class="dot">◆</span> <strong>100% Placement Support</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Live Projects</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Industry Certification</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Expert Trainers</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>LLMs · LangChain · RAG · Stable Diffusion</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Flexible Batches</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>Electronic City Phase 1, Bangalore</strong></span>
+    <span class="marquee-item"><span class="dot">◆</span> <strong>eMexo Technologies</strong></span>
+  </div>
+</div>
+
+<!-- ══ INTERNAL LINKS ══ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <span class="section-label reveal">Explore Programs</span>
+    <h2 class="reveal">Find Your Perfect <span>GenAI Program</span></h2>
+    <p class="section-p reveal">
+      Recognised as the leading destination for <strong style="color:var(--white)">GenAI Training and Placement in Electronic City</strong>. Browse by keyword:
+    </p>
+    <div class="ilinks">
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="icard reveal">
+        <span class="kl">GenAI Training in Electronic City</span>
+        <span class="ks">Beginner-to-advanced, all backgrounds welcome</span>
+        <span class="arrow-ic">→</span>
+      </a>
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="icard reveal" style="transition-delay:.07s">
+        <span class="kl">GenAI Course in Electronic City</span>
+        <span class="ks">Flexible batches, live projects, expert mentors</span>
+        <span class="arrow-ic">→</span>
+      </a>
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="icard reveal" style="transition-delay:.14s">
+        <span class="kl">GenAI Certification Course in Electronic City</span>
+        <span class="ks">Globally recognised certification pathway</span>
+        <span class="arrow-ic">→</span>
+      </a>
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="icard reveal" style="transition-delay:.21s">
+        <span class="kl">Best GenAI Training in Electronic City</span>
+        <span class="ks">Rated #1 by 5000+ alumni</span>
+        <span class="arrow-ic">→</span>
+      </a>
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="icard reveal" style="transition-delay:.28s">
+        <span class="kl">GenAI Training Institute in Electronic City</span>
+        <span class="ks">State-of-the-art labs, real-world curriculum</span>
+        <span class="arrow-ic">→</span>
+      </a>
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="icard reveal" style="transition-delay:.35s">
+        <span class="kl">GenAI Training and Placement in Electronic City</span>
+        <span class="ks">100% placement assistance, 150+ hiring partners</span>
+        <span class="arrow-ic">→</span>
+      </a>
+    </div>
+    <div class="tags reveal">
+      <span class="tag">GenAI Training in Electronic City</span>
+      <span class="tag">GenAI Course in Electronic City</span>
+      <span class="tag">GenAI Certification Course in Electronic City</span>
+      <span class="tag">Best GenAI Training in Electronic City</span>
+      <span class="tag">GenAI Training Institute in Electronic City</span>
+      <span class="tag">GenAI Training Center in Electronic City</span>
+      <span class="tag">GenAI Training and Placement in Electronic City</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section">
+  <div class="wrap">
+    <span class="section-label reveal">FAQ</span>
+    <h2 class="reveal">Frequently Asked <span>Questions</span></h2>
+    <p class="section-p reveal">Everything you need to know about our <strong style="color:var(--white)">GenAI Certification Course in Electronic City</strong>.</p>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="faq(this)">
+          What is the duration of the GenAI Course in Electronic City?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Our <strong style="color:var(--white)">GenAI Course in Electronic City</strong> runs for 2–3 months. Weekday batches complete in 60 days, weekend batches in 90 days, and fast-track intensive options for working professionals finish in 45 days. Every batch includes live sessions, recorded replays, and dedicated hands-on lab hours.
+        </div>
+      </div>
+      <div class="faq-item reveal" style="transition-delay:.07s">
+        <button class="faq-q" onclick="faq(this)">
+          Do I need prior coding experience for the GenAI Training in Electronic City?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          No prior AI or ML knowledge required. Our <strong style="color:var(--white)">GenAI Training in Electronic City</strong> begins with Python fundamentals and the mathematics behind AI before advancing to fine-tuning LLMs and building RAG pipelines. Candidates from non-IT backgrounds — commerce, arts, management — have successfully completed the programme and secured placements.
+        </div>
+      </div>
+      <div class="faq-item reveal" style="transition-delay:.14s">
+        <button class="faq-q" onclick="faq(this)">
+          What certification will I receive after the course?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          You will receive the eMexo Technologies <strong style="color:var(--white)">GenAI Professional Certification</strong>, recognised by 150+ hiring partners pan-India. It validates your skills in LLMs, prompt engineering, image generation, LangChain, and production deployment — making your resume stand out in every <strong style="color:var(--white)">GenAI Training and Placement in Electronic City</strong> hiring cycle.
+        </div>
+      </div>
+      <div class="faq-item reveal" style="transition-delay:.21s">
+        <button class="faq-q" onclick="faq(this)">
+          How does placement work at the Best GenAI Training in Electronic City?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Our dedicated placement cell begins mock interview prep from month two. We run resume workshops, LinkedIn optimisation, aptitude prep, and technical mock interviews. As the top <strong style="color:var(--white)">GenAI Training Institute in Electronic City</strong>, we maintain an active talent pipeline that companies tap for every hiring cycle — resulting in a 98% placement rate.
+        </div>
+      </div>
+      <div class="faq-item reveal" style="transition-delay:.28s">
+        <button class="faq-q" onclick="faq(this)">
+          Is the GenAI Training Center in Electronic City accessible by metro?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Absolutely. Our <strong style="color:var(--white)">GenAI Training Center in Electronic City</strong> is in Phase 1, accessible by Namma Metro (Green Line), BMTC buses, and all cab services. It is approximately a 5-minute walk from the Electronic City metro station. Call <strong style="color:var(--green)">+91-9513216462</strong> for exact directions.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ IMAGE 4 ══ -->
+<section class="section section-alt" style="padding-top:48px;padding-bottom:56px;">
+  <div class="wrap">
+    <div class="img-block reveal">
+      <img
+        src="https://raw.githubusercontent.com/emexo2026/GenAI-Training-Course-Electronic-City/refs/heads/main/ChatGPT%20Image%20May%2024%2C%202026%2C%2005_07_58%20PM.png"
+        alt="GenAI Training Center Electronic City - eMexo Technologies Students"
+        loading="lazy"
+      />
+      <p class="img-cap">Join thousands of students who transformed their careers at eMexo's GenAI Training Center in Electronic City</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="section">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <span class="section-label">Contact Us</span>
+      <h2><span>Get in Touch</span> — We're Here 7 Days a Week</h2>
+      <p class="section-p">
+        Ready to enroll in the <strong style="color:var(--white)">Best GenAI Training in Electronic City</strong>? Our counsellors are here to answer every question.
+      </p>
+      <div class="cdetails">
+        <div class="citem"><span class="icon">📞</span><a href="tel:+919513216462">+91-9513216462</a></div>
+        <div class="citem"><span class="icon">🌐</span><a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" target="_blank">emexotechnologies.com</a></div>
+        <div class="citem"><span class="icon">📍</span><span>Electronic City Phase 1, Bangalore</span></div>
+        <div class="citem"><span class="icon">⏰</span><span>Mon–Sun: 9 AM – 8 PM</span></div>
+      </div>
+      <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="btn-g" style="font-size:1rem;padding:16px 44px;display:inline-block;">
+        📩 Enquire About GenAI Training →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ENROLL CTA ══ -->
+<section class="enroll-section">
+  <span class="section-label reveal">Limited Seats</span>
+  <h2 class="reveal" style="max-width:600px;margin:0 auto 16px;">Enroll Now — <span>Next Batch</span> Starts Soon!</h2>
+  <p class="section-p reveal" style="margin:0 auto 36px;text-align:center;">
+    Join thousands who chose the #1
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="klink">GenAI Training Institute in Electronic City</a>.
+    Seats are limited per batch — secure yours today.
+  </p>
+  <div class="btn-row reveal">
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/" class="btn-g" style="font-size:1.05rem;padding:17px 46px;">🚀 Enroll in GenAI Course Now</a>
+    <a href="tel:+919513216462" class="btn-ghost" style="font-size:1.05rem;padding:15px 36px;">📞 Talk to a Counsellor</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© 2025 eMexo Technologies. All rights reserved. &nbsp;|&nbsp;
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/">GenAI Training in Electronic City</a> &nbsp;|&nbsp;
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/">Best GenAI Training in Electronic City</a> &nbsp;|&nbsp;
+    <a href="https://www.emexotechnologies.com/courses/generative-ai-gen-ai-training/">GenAI Certification Course in Electronic City</a>
+  </p>
+</footer>
+
+<script>
+/* ── CUSTOM CURSOR ── */
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cur.style.transform=`translate(${mx-6}px,${my-6}px)`;
+});
+function lerpCursor(){
+  rx+=(mx-rx)*.12;ry+=(my-ry)*.12;
+  ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;
+  requestAnimationFrame(lerpCursor);
+}lerpCursor();
+document.querySelectorAll('a,button,.card,.stat-card,.icard,.tag').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    cur.style.transform+=` scale(1.8)`;
+    ring.style.width='54px';ring.style.height='54px';
+    ring.style.marginLeft='-9px';ring.style.marginTop='-9px';
+  });
+  el.addEventListener('mouseleave',()=>{
+    ring.style.width='36px';ring.style.height='36px';
+    ring.style.marginLeft='0';ring.style.marginTop='0';
+  });
+});
+
+/* ── FAQ ── */
+function faq(btn){
+  const a=btn.nextElementSibling,open=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(b=>b.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));
+  if(!open){btn.classList.add('open');a.classList.add('open');}
+}
+
+/* ── SCROLL REVEAL ── */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+
+/* ── COUNTER ANIMATION ── */
+const cntObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,target=+el.dataset.target,suffix=el.dataset.suffix||'+';
+    let start=0,dur=1800,step=dur/60;
+    const inc=target/60;
+    const t=setInterval(()=>{
+      start+=inc;
+      if(start>=target){el.textContent=target+suffix;clearInterval(t);}
+      else{el.textContent=Math.floor(start)+(start>target*0.5?suffix:'');}
+    },step);
+    cntObs.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('.stat-n[data-target]').forEach(el=>cntObs.observe(el));
+
+/* ── SCROLL PROGRESS ── */
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progress').style.width=(s/h*100)+'%';
+  const btt=document.getElementById('btt');
+  s>300?btt.classList.add('show'):btt.classList.remove('show');
+});
+
+/* ── PARTICLES ── */
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+let W=canvas.width=window.innerWidth,H=canvas.height=window.innerHeight;
+window.addEventListener('resize',()=>{W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;});
+const dots=Array.from({length:70},()=>({
+  x:Math.random()*W,y:Math.random()*H,
+  vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,
+  r:Math.random()*1.5+.5,
+  op:Math.random()*.5+.1
+}));
+function drawParticles(){
+  ctx.clearRect(0,0,W,H);
+  dots.forEach(d=>{
+    d.x+=d.vx;d.y+=d.vy;
+    if(d.x<0)d.x=W;if(d.x>W)d.x=0;
+    if(d.y<0)d.y=H;if(d.y>H)d.y=0;
+    ctx.beginPath();
+    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(0,255,136,${d.op})`;
+    ctx.fill();
+  });
+  // draw lines between nearby dots
+  for(let i=0;i<dots.length;i++){
+    for(let j=i+1;j<dots.length;j++){
+      const dx=dots[i].x-dots[j].x,dy=dots[i].y-dots[j].y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<120){
+        ctx.beginPath();
+        ctx.moveTo(dots[i].x,dots[i].y);
+        ctx.lineTo(dots[j].x,dots[j].y);
+        ctx.strokeStyle=`rgba(0,255,136,${.08*(1-dist/120)})`;
+        ctx.lineWidth=.5;
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+</script>
+</body>
+</html>
